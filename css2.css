@@ -1,0 +1,77 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background: black;
+}
+*{
+    font-family: fantasy;
+}
+
+ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    padding: 0px;
+
+
+}
+
+ul li{
+    list-style: none;
+    margin: 20px;
+}
+ul li a {
+    font-size: 30px;
+    text-decoration: none;
+    width: 150px;
+    height: 40px;
+    color: whitesmoke;
+    position: relative;
+    line-height: 50px;
+}
+
+ul li a span{
+    width: 100%;
+    height: 100%;
+    background: pink;
+    display: block;
+    color: white;
+    letter-spacing: 3px;
+    transform-style: preserve-3d;
+    perspective: 100px;
+    border-top: 4px solid blue;
+}
+
+
+ul li a span:before{
+    content: attr(data-text );
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: green;
+    transform-origin: top;
+    transform: rotateX(270deg);
+    transition: .5s;
+}
+ul li a:hover span:before{
+    transform: rotateX(0deg);
+}
+ul li a span:after{
+    content: attr(data-text );
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: orange;
+    transform-origin: top;
+    transform: rotateX(270deg);
+    transition: .5s;
+}
+ul li a:hover span:after{
+    transform: rotateX(0deg);
+}
